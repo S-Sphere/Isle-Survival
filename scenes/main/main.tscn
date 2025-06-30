@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://f4j4c8uu7xn3"]
+
+[ext_resource type="PackedScene" uid="uid://croy1dus2x7ll" path="res://scenes/map/map_generator.tscn" id="1_sodfi"]
+[ext_resource type="PackedScene" uid="uid://cufbo0q2qfdd4" path="res://scenes/player/player.tscn" id="2_2t4yk"]
+[ext_resource type="PackedScene" uid="uid://dnhi4kblr1i1w" path="res://scenes/map/Obstacle_1.tscn" id="2_ow5a4"]
+[ext_resource type="PackedScene" uid="uid://bp8y43w4mbjnj" path="res://scenes/enemies/EnemySpawner.tscn" id="4_ob1my"]
+[ext_resource type="PackedScene" uid="uid://d6xnnjiq4aap" path="res://scenes/ui/hud.tscn" id="5_1wt1j"]
+
+[node name="Main" type="Node2D"]
+
+[node name="MapGenerator" parent="." instance=ExtResource("1_sodfi")]
+obstacle_scenes = [ExtResource("2_ow5a4")]
+
+[node name="Player" parent="." instance=ExtResource("2_2t4yk")]
+position = Vector2(1, -8)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("4_ob1my")]
+
+[node name="Hud" parent="." instance=ExtResource("5_1wt1j")]

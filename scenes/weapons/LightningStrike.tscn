@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://cqlpy2n78y8me"]
+
+[ext_resource type="Texture2D" uid="uid://lk7gk4yunndw" path="res://assets/sprites/weapons/Sprite-sheet.png" id="1_1s56s"]
+[ext_resource type="Script" uid="uid://dkvda2hae1rsf" path="res://scripts/weapons/lightning_strike.gd" id="1_o8lv3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3337"]
+atlas = ExtResource("1_1s56s")
+region = Rect2(384, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xibjo"]
+atlas = ExtResource("1_1s56s")
+region = Rect2(512, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8lv3"]
+atlas = ExtResource("1_1s56s")
+region = Rect2(0, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg04n"]
+atlas = ExtResource("1_1s56s")
+region = Rect2(128, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jeirp"]
+atlas = ExtResource("1_1s56s")
+region = Rect2(256, 0, 128, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cj11n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3337")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xibjo")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8lv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg04n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jeirp")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1s56s"]
+radius = 7.0
+height = 16.0
+
+[node name="LightningStrike" type="Node2D"]
+script = ExtResource("1_o8lv3")
+fall_duration = 0.5
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.203125, 0.419922)
+sprite_frames = SubResource("SpriteFrames_cj11n")
+animation = &"fall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 39)
+shape = SubResource("CapsuleShape2D_1s56s")

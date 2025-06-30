@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://18p5md08i3n8"]
+
+[ext_resource type="Script" uid="uid://kn15oxflwbv8" path="res://scripts/weapons/lightning_weapon.gd" id="1_mjaov"]
+[ext_resource type="PackedScene" uid="uid://cqlpy2n78y8me" path="res://scenes/weapons/LightningStrike.tscn" id="2_3gsly"]
+
+[node name="Lightning" type="Node2D"]
+script = ExtResource("1_mjaov")
+lightning_scene = ExtResource("2_3gsly")

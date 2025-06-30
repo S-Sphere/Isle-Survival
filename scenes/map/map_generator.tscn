@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://croy1dus2x7ll"]
+
+[ext_resource type="Script" uid="uid://bc1k23nt23etc" path="res://scripts/map/map_generator.gd" id="1_m7lcy"]
+[ext_resource type="Texture2D" uid="uid://dobn5mq0yb8dq" path="res://assets/sprites/background/mud_0.png" id="2_47037"]
+[ext_resource type="Texture2D" uid="uid://4xh30l3vsjiy" path="res://assets/sprites/background/lab-rock_1.png" id="3_47037"]
+[ext_resource type="PackedScene" uid="uid://c4ir8pqn3b3cl" path="res://scenes/map/WaterTile.tscn" id="4_sasw2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47037"]
+resource_name = "floor"
+texture = ExtResource("2_47037")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sasw2"]
+resource_name = "wall"
+texture = ExtResource("3_47037")
+0:0/0 = 0
+1:1/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kb4gc"]
+sources/0 = SubResource("TileSetAtlasSource_47037")
+sources/1 = SubResource("TileSetAtlasSource_sasw2")
+
+[node name="MapGenerator" type="Node2D"]
+script = ExtResource("1_m7lcy")
+water_scene = ExtResource("4_sasw2")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_kb4gc")
+format = 2
+
+[node name="TileMapLayer_floor" type="TileMapLayer" parent="TileMap"]
+tile_set = SubResource("TileSet_kb4gc")
+
+[node name="TileMapLayer2_wall" type="TileMapLayer" parent="TileMap"]
+tile_set = SubResource("TileSet_kb4gc")
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="WallColliders" type="Node2D" parent="."]
+
+[node name="Water" type="Node2D" parent="."]

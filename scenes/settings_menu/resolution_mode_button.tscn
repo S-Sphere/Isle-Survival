@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://4a53afdv0f52"]
+
+[ext_resource type="PackedScene" uid="uid://cfgvhl577kjqf" path="res://scenes/settings_menu/settings_display_button.tscn" id="1_r1a1y"]
+[ext_resource type="Script" uid="uid://ct4g74n1brygu" path="res://scripts/settings_menu/resolution_mode_button.gd" id="2_dibak"]
+[ext_resource type="Theme" uid="uid://b2aoldv3yg7kx" path="res://themes/main_menu_theme.tres" id="3_lc858"]
+
+[node name="Resolution_Mode_Button" instance=ExtResource("1_r1a1y")]
+script = ExtResource("2_dibak")
+
+[node name="HBoxContainer" parent="." index="0"]
+scale = Vector2(1, 1)
+theme = ExtResource("3_lc858")
+
+[node name="Label" parent="HBoxContainer" index="0"]
+text = "Resolution
+"

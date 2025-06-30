@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0s4e8hs7n080"]
+
+[ext_resource type="Script" uid="uid://b15sc8pk3p4gk" path="res://scripts/main_menu/shop_menu.gd" id="1_4rch4"]
+[ext_resource type="Theme" uid="uid://b2aoldv3yg7kx" path="res://themes/main_menu_theme.tres" id="2_ecgsk"]
+
+[node name="ShopMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_4rch4")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29
+anchor_top = 0.371
+anchor_right = 0.715
+anchor_bottom = 0.81
+offset_left = -0.400024
+offset_top = -151.6
+offset_right = 0.0999756
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ecgsk")
+columns = 2
+
+[node name="CoinsLabel" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "COINS "
+
+[node name="Sell" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(260, 65)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Sell All
+"
+
+[node name="Speed" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(260, 65)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Speed Upgrade"
+
+[node name="Defense" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(260, 65)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Defense Upgrade"
+
+[node name="Health" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(260, 65)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Health Upgrade
+"
+
+[node name="Magnet" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(260, 65)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Magnet Upgrade
+"
+
+[node name="Damage" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(260, 65)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Damage Upgrade
+"

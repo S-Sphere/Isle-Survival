@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Upgrade" load_steps=3 format=3 uid="uid://ecgd2eqneo11"]
+
+[ext_resource type="Script" uid="uid://btkowvvw312h2" path="res://scripts/upgrades/upgrade.gd" id="1_8aye1"]
+[ext_resource type="PackedScene" uid="uid://cnx5gf0c5e425" path="res://scenes/weapons/player_firebolt_radial.tscn" id="2_7gfjo"]
+
+[resource]
+script = ExtResource("1_8aye1")
+name = "Radial Firebolt"
+description = "Shoots firebolts in all directions"
+stat = "weapon"
+values = Array[float]([2.0, 2.0, 2.0, 2.0, 0.0])
+weapon_scene = ExtResource("2_7gfjo")
+max_level = 5

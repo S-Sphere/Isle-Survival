@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnhi4kblr1i1w"]
+
+[ext_resource type="Texture2D" uid="uid://cvhr5kepxlv3t" path="res://assets/sprites/background/mangrove_3.png" id="1_x2507"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4jno"]
+size = Vector2(31.5, 32)
+
+[node name="Obstacle1" type="StaticBody2D"]
+collision_layer = 10
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x2507")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_r4jno")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Upgrade" load_steps=2 format=3 uid="uid://ttu86t20jn2j"]
+
+[ext_resource type="Script" uid="uid://btkowvvw312h2" path="res://scripts/upgrades/upgrade.gd" id="1_jt3e2"]
+
+[resource]
+script = ExtResource("1_jt3e2")
+name = "Speed"
+description = "Increases movement speed"
+stat = "speed"
+values = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+max_level = 10

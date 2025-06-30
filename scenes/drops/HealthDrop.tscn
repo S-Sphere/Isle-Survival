@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://6eai4nmeol43"]
+
+[ext_resource type="Script" uid="uid://bac6vhlawhxrq" path="res://scripts/misc/pickup.gd" id="1_607xg"]
+[ext_resource type="Texture2D" uid="uid://cocl8sgxt2q72" path="res://assets/sprites/misc/hp_potion.png" id="2_w8cc7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wuhl7"]
+radius = 4.0
+height = 8.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_607xg")
+pickup_type = "health"
+value = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.189999, -1.27)
+scale = Vector2(0.60125, 0.59125)
+texture = ExtResource("2_w8cc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_wuhl7")

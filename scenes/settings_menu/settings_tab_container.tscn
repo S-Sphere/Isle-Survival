@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://btnt8pfkhms8c"]
+
+[ext_resource type="PackedScene" uid="uid://t11j130qbxfk" path="res://scenes/settings_menu/window_mode_button.tscn" id="1_iicmn"]
+[ext_resource type="Theme" uid="uid://b2aoldv3yg7kx" path="res://themes/main_menu_theme.tres" id="1_ygjqs"]
+[ext_resource type="PackedScene" uid="uid://4a53afdv0f52" path="res://scenes/settings_menu/resolution_mode_button.tscn" id="2_1psg6"]
+[ext_resource type="PackedScene" uid="uid://cixe7rvhcq8ry" path="res://scenes/settings_menu/damage_numbers_button.tscn" id="3_epxoi"]
+
+[node name="Settings_Tab_Container" type="Control"]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_ygjqs")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 101.0
+offset_top = 34.0
+offset_right = -189.0
+offset_bottom = -126.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.12, 1)
+tab_alignment = 1
+current_tab = 0
+tabs_visible = false
+
+[node name="Graphics" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.975
+anchor_bottom = 1.0
+offset_right = -0.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Graphics/MarginContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Window_Mode_Button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_iicmn")]
+layout_mode = 2
+theme = null
+
+[node name="Resolution_Mode_Button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_1psg6")]
+layout_mode = 2
+theme = null
+
+[node name="Damage_Numbers_Button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_epxoi")]
+layout_mode = 2

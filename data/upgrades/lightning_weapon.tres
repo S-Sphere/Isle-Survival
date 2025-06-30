@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Upgrade" load_steps=3 format=3 uid="uid://g7n5jt4m0y5e"]
+
+[ext_resource type="Script" uid="uid://btkowvvw312h2" path="res://scripts/upgrades/upgrade.gd" id="1_oo2j3"]
+[ext_resource type="PackedScene" uid="uid://18p5md08i3n8" path="res://scenes/weapons/LightningWeapon.tscn" id="2_qs6xt"]
+
+[resource]
+script = ExtResource("1_oo2j3")
+name = "Lightning Strike"
+description = "Summons bols of lightning"
+stat = "weapon"
+values = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0])
+weapon_scene = ExtResource("2_qs6xt")
+max_level = 5
+metadata/_custom_type_script = "uid://btkowvvw312h2"

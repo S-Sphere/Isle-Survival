@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://nfydoxnj4ddh"]
+
+[ext_resource type="Script" uid="uid://bac6vhlawhxrq" path="res://scripts/misc/pickup.gd" id="1_4jpg2"]
+[ext_resource type="Texture2D" uid="uid://bkruvgj8aj8vd" path="res://assets/sprites/misc/pixilart-drawing (2).png" id="1_15h2g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wuhl7"]
+radius = 4.0
+height = 12.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_4jpg2")
+pickup_type = "coin"
+value = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(0.39, 0.37)
+texture = ExtResource("1_15h2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_wuhl7")

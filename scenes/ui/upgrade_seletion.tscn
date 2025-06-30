@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0bclhsb2h8ic"]
+
+[ext_resource type="Script" uid="uid://c0g2uqcci655y" path="res://scripts/upgrades/upgrade_seletion.gd" id="1_221ms"]
+
+[node name="Control" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+localize_numeral_system = false
+script = ExtResource("1_221ms")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10873
+anchor_top = 0.13
+anchor_right = 0.892063
+anchor_bottom = 0.901667
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 150
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrade 1"
+autowrap_mode = 3
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrade 2"
+autowrap_mode = 3
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrade 3"
+autowrap_mode = 3

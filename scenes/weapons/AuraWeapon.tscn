@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cohvoi3hp85bw"]
+
+[ext_resource type="Script" uid="uid://cv0737elcul0k" path="res://scripts/weapons/aura_weapon.gd" id="1_uvhwc"]
+[ext_resource type="Texture2D" uid="uid://61du148yuri" path="res://assets/sprites/weapons/aura.png" id="2_q2byg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uvhwc"]
+radius = 12.0
+
+[node name="AuraWeapon" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_uvhwc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_q2byg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_uvhwc")

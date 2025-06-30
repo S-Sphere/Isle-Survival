@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://db4ln5yev7qt"]
+
+[ext_resource type="Script" uid="uid://3b7o56w78u57" path="res://scripts/enemies/base_enemy.gd" id="1_r5xb8"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 2
+collision_layer = 4
+collision_mask = 23
+script = ExtResource("1_r5xb8")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
